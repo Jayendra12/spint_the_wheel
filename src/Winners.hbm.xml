@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.spin_the_wheel.model.Winners" table="Winners_list">
+		 
+	 	
+	
+		<id name="id" type="int" column="id">   
+			<generator class="native"/>
+		</id>
+
+
+       
+		<property name="firstName" type="string" length="30">
+		</property>
+		
+		<property name="lastName" type="string" length="30">
+		</property>
+		
+		<property name="email" type="string" length="30">
+		</property>
+		
+		<property name="gender" type="string" length="30">
+		</property>
+		
+		<property name="phoneNo" type="string" length="30">
+		</property>
+		
+		<property name="birthDate" type="string" length="30">
+		</property>
+		
+		<property name="storeName" type="string" length="30">
+		</property>
+	  	
+	  	<property name="address" type="string" length="250">
+		</property>
+		
+		<property name="city" type="string" length="30">
+		</property>
+		
+		<property name="state" type="string" length="30">
+		</property>
+		 
+		<property name="zipcode" type="string" length="10">
+		</property>
+		
+		<property name="country" type="string" length="30">
+		</property>
+		
+		<many-to-one name="receiptId" class="com.spin_the_wheel.model.Receipt" column="Receipt_id" cascade="all" not-null="true" />
+	</class>
+</hibernate-mapping>
